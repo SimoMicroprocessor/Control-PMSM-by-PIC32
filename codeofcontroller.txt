@@ -1,0 +1,28 @@
+#define        M1     PORTB.F7
+#define        M2     PORTB.F6
+#define        B1     PORTD.F0
+#define        B2     PORTD.F1
+
+int a;
+
+void main() {
+TRISB=0;
+TRISD=0xFF;
+PORTB = 0;
+a = 1;
+while(1){
+if((B1 == 0) && (a==1)){
+PortB=0xFF;
+delay_ms(100);
+PortB=0x00;
+delay_ms(1);
+PortB=0xff;
+a=0;
+}
+if(B2 == 0){
+PortB=0x00;
+}
+
+}
+}
+ 
